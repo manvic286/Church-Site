@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Contact Us</h2>
+                <p>We're here to help and answer any questions</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="contact-details">
+                <h3>Parish Office</h3>
+                <p><i class="fas fa-map-marker-alt"></i> [Your Church Address]</p>
+                <p><i class="fas fa-phone"></i> [Phone Number]</p>
+                <p><i class="fas fa-envelope"></i> [Email Address]</p>
+                <p><i class="fas fa-clock"></i> Office Hours:<br>
+                   Monday-Friday: 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <form action="/submit-contact" method="post" class="contact-form">
+                <h3>Send us a Message</h3>
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section class="map-section">
+            <h3>Find Us</h3>
+            <!-- Add your Google Maps embed code here -->
+            <div class="map-container">
+                <!-- <iframe 
+                    src="https://maps.app.goo.gl/FpDGka5oXGs7b353A"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.762845688946!2d-0.24107494100036625!3d5.602011001654138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf999fa4b361a7%3A0x35486876ea2759db!2sSt%20Charles%20Lwanga%20Catholic%20Church!5e0!3m2!1sen!2sgh!4v1733173281439!5m2!1sen!2sgh" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+    <script src="script.js"></script>
+</body>
+</html> 

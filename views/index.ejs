@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Our Parish</h2>
+                <p>Join us in worship, fellowship, and service to our community</p>
+                <a href="/mass-times" class="cta-button">Join Us for Mass</a>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <div class="quick-link-item">
+                <i class="fas fa-cross"></i>
+                <h3>Mass Times</h3>
+                <p>Sunday: 8:00 AM, 10:30 AM<br>
+                   Weekdays: 8:30 AM</p>
+            </div>
+            <div class="quick-link-item">
+                <i class="fas fa-church"></i>
+                <h3>Confession</h3>
+                <p>Saturday: 3:00-4:00 PM<br>
+                   Or by appointment</p>
+            </div>
+            <div class="quick-link-item">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Get Involved</h3>
+                <p>Explore our ministries and ways to serve</p>
+            </div>
+        </section>
+
+        <section class="content content1">
+            <div class="image" role="img" aria-label="Church image 1"></div>
+            <p class="content-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ipsum vel voluptas commodi dolorem maxime ullam quo facere unde corporis officia maiores quam est rerum quidem? Accusantium error, pariatur nulla, voluptas perspiciatis quibusdam ut laboriosam dignissimos iure libero corporis quod dicta tenetur aspernatur, modi odio.
+            </p>
+        </section>
+
+        <section class="content content2">
+            <div class="image-2" role="img" aria-label="Church image 2"></div>
+            <p class="content-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ipsum vel voluptas commodi dolorem maxime ullam quo facere unde corporis officia maiores quam est rerum quidem? Accusantium error, pariatur nulla, voluptas perspiciatis quibusdam ut laboriosam dignissimos iure libero corporis quod dicta tenetur aspernatur, modi odio.
+            </p>
+            <div class="image" role="img" aria-label="Church image 3"></div>
+        </section>
+
+        <section class="content content3">
+            <div class="image" role="img" aria-label="Church image 4"></div>
+            <p class="content-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ipsum vel voluptas commodi dolorem maxime ullam quo facere unde corporis officia maiores quam est rerum quidem? Accusantium error, pariatur nulla, voluptas perspiciatis quibusdam ut laboriosam dignissimos iure libero corporis quod dicta tenetur aspernatur, modi odio.
+            </p>
+        </section>
+
+        <hr>
+
+        <aside>
+            <form action="/submit-feedback" method="post" class="feedback-form">
+                <h2>Share Your Concerns and Suggestions</h2>
+
+                <div class="form-group">
+                    <label for="name">Name (Optional):</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Message:</label>
+                    <textarea name="content" id="content" placeholder="Type your message here" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </aside>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
