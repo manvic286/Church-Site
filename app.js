@@ -47,9 +47,9 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
-// app.use((req, res) => {
-//     res.status(404).render('404');
-// });
-
 const eventsRouter = require('./routes/events');
 app.use('/events', eventsRouter);
+
+app.use((req, res) => {
+    res.status(404).render('404');
+});

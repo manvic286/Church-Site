@@ -3,7 +3,7 @@
     --primary: #1B3C59;      /* Deep navy */
     --secondary: #B8860B;    /* Dark golden */
     --accent: #8B0000;       /* Deep red */
-    --light: #F5F5F5;        /* Off-white */
+    --light: #e4e4e4;        /* Off-white */
     --dark: #2C2C2C;         /* Soft black */
     --gold: #D4AF37;         /* Metallic gold */
 }
@@ -308,6 +308,7 @@ footer {
     position: relative;
     width: 30px;
     height: 20px;
+    color: #2C2C2C;
 }
 
 .hamburger-icon span {
