@@ -1,6 +1,6 @@
 :root {
     /* Traditional Catholic colors with a modern twist */
-    --primary: #ff9900;      /* Deep navy */
+    --primary: #1B3C59;      /* Deep navy */
     --secondary: #B8860B;    /* Dark golden */
     --accent: #8B0000;       /* Deep red */
     --light: #e4e4e4;        /* Off-white */
@@ -18,7 +18,6 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--dark);
-    background-color: #bbbbbb;
 }
 
 /* Typography */
