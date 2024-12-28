@@ -41,7 +41,7 @@ const eventSchema = {
 const Event = mongoose.model('Event', eventSchema);
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {title: "St. Charles Lwanga Catholic Church | Abeka"})
 })
 
 app.get('/about', (req, res) => {
