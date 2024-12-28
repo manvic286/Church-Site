@@ -10,17 +10,17 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',).then(() => {
-//     console.log('Connected to MongoDB');
-// }).catch(err => {
-//     console.error('Connection error', err);
-// });
-mongoose.connect('mongodb://localhost:27017/Events',)
-  .then(() => {
+mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',).then(() => {
     console.log('Connected to MongoDB');
-    }).catch(err => {
+}).catch(err => {
     console.error('Connection error', err);
 });
+// mongoose.connect('mongodb://localhost:27017/Events',)
+//   .then(() => {
+//     console.log('Connected to MongoDB');
+//     }).catch(err => {
+//     console.error('Connection error', err);
+// });
 
 // Schemas
 const eventSchema = {
