@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const ejs = require('ejs')
-const multer = require('multer')
+// const multer = require('multer')
 const app = express()
 
 app.set('view engine', 'ejs')
@@ -9,7 +9,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://manuelviotor:charleslwanga@charleslwanga.zj69b.mongodb.net/', {
+mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
