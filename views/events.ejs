@@ -16,7 +16,7 @@
     <section class="events-container">
         <% if(events.length > 0){ %>
             <% events.forEach(event => { %> 
-                <a> href="/event/<%= event._id %>" class="btn">
+                <a href="/event/<%= event._id %>" class="btn">
                     <div class="event-card">
                         <div class="event-date">
                             <span class="month"><%= event.month %></span>
