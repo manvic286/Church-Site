@@ -10,17 +10,17 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',).then(() => {
-    console.log('Connected to MongoDB');
-}).catch(err => {
-    console.error('Connection error', err);
-});
-// mongoose.connect('mongodb://localhost:27017/Events',)
-//   .then(() => {
+// mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',).then(() => {
 //     console.log('Connected to MongoDB');
-//     }).catch(err => {
+// }).catch(err => {
 //     console.error('Connection error', err);
 // });
+mongoose.connect('mongodb://localhost:27017/Events',)
+  .then(() => {
+    console.log('Connected to MongoDB');
+    }).catch(err => {
+    console.error('Connection error', err);
+});
 
 // Schemas
 const eventSchema = {
@@ -37,7 +37,15 @@ const eventSchema = {
     // imageUrl: String
 };
 
+const messageSchema = {
+    name: String,
+    email: String,
+    subject: String,
+    message: String
+};
+
 const Event = mongoose.model('Event', eventSchema);
+const Message = mongoose.model('Message', messageSchema);
 
 app.get('/', (req, res) => {
     res.render('index', {title: "St. Charles Lwanga Catholic Church | Abeka"})
@@ -88,6 +96,25 @@ app.get('/manage-events', (req, res) => {
 
 app.get('/contact', (req, res) => {
     res.render('contact', {title: "Contact Us"});
+});
+
+app.post('/contact', (req, res) => {
+    const message = new Message(req.body)
+
+    message.save()
+        .then(result => {
+            res.redirect('/contact');
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+app.get('/messages', (req, res) => {
+    Message.find()
+        .then(messages => {
+            res.render('messages', { messages, title: "Messages"})
+        })
 });
 
 // const eventsRouter = require('./routes/events');
