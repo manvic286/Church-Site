@@ -5,19 +5,53 @@
     <%- include('./partials/nav.ejs') %>
 
     <main class="container">
-        <h2>Manage Events</h2>
+        <!-- <h2>Manage Events</h2> -->
+        <section class="hero events-hero">
+            <div class="hero-content">
+                <h2>Add Events</h2>
+                <p>Create your events here</p>
+            </div>
+        </section><br><br>
 
-        <form action="/events/create" method="post" class="event-form">
-            <h3>Create New Event</h3>
-            <input type="text" name="title" placeholder="Event Title" required>
-            <input type="date" name="date" required>
-            <input type="time" name="time" required>
-            <input type="text" name="location" placeholder="Location" required>
-            <textarea name="description" placeholder="Description" required></textarea>
-            <button type="submit">Create Event</button>
+        <form action="/events" method="POST">
+            <label for="eventName">Event name</label>
+            <input type="text" name="eventName" id="event-name" required>
+
+            <label for="month">Choose a month:</label>
+            <input list="months" id="month" name="month" placeholder="Select a month">
+            <datalist id="months">
+                <option value="January">
+                <option value="February">
+                <option value="March">
+                <option value="April">
+                <option value="May">
+                <option value="June">
+                <option value="July">
+                <option value="August">
+                <option value="September">
+                <option value="October">
+                <option value="November">
+                <option value="December">
+            </datalist>
+
+            <label for="day">Event day</label>
+            <input type="number" name="day" id="event-day" min="1" max="31" required>
+
+            <label for="time">Time</label>
+            <input type="time" name="time" id="event-time" required>
+
+            <label for="description">Event description</label>
+            <textarea name="description" id="event-description" required></textarea>
+
+            <label for="image">Choose Image: </label>
+            <input type="file" name="image" id="imageInput" accept="image/*">
+            <img id="imagePreview" src="" alt="">
+            <br><br>
+
+            <button>Submit</button>
         </form>
 
-        <h3>Upcoming Events</h3>
+        <!-- <h3>Upcoming Events</h3>
         <ul class="event-list">
             <% events.forEach(event => { %>
                 <li>
@@ -34,7 +68,7 @@
                     </form>
                 </li>
             <% }) %>
-        </ul>
+        </ul> -->
     </main>
 
     <%- include('./partials/footer.ejs') %>

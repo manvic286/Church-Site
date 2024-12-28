@@ -60,6 +60,29 @@ app.get('/events', (req, res) => {
     // res.render('events');
 });
 
+app.get('/event/:id', (req, res) => {
+    const id = req.params.id
+    Event.findById(id)
+        .then(result => {
+            res.render('details', { event: result, title: "Event Details" });
+        })
+        .catch(err => {
+            console.log(err)
+        })
+});
+
+app.post('/events', (req, res) => {
+    const event = new Event(req.body)
+
+    event.save()
+        .then(result => {
+            res.redirect('/events');
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
 app.get('/events/manage', (req, res) => {
     res.render('manage');
 });
