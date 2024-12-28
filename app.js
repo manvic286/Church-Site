@@ -82,7 +82,7 @@ app.post('/events', (req, res) => {
         });
 });
 
-app.get('/events/manage', (req, res) => {
+app.get('/manage-events', (req, res) => {
     res.render('manage', {title: "Manage Events"});
 });
 
