@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const path = require('path');
 const ejs = require('ejs')
 // const multer = require('multer')
 const app = express()
@@ -9,19 +10,17 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-const PORT = 4001;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-
-mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
+mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',).then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('Connection error', err);
 });
+// mongoose.connect('mongodb://localhost:27017/Events',)
+//   .then(() => {
+//     console.log('Connected to MongoDB');
+//     }).catch(err => {
+//     console.error('Connection error', err);
+// });
 
 // Schemas
 const eventSchema = {
@@ -45,11 +44,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', {title: "About Us"});
 });
 
 app.get('/services', (req, res) => {
-    res.render('services');
+    res.render('services', {title: "Services"});
 });
 
 app.get('/events', (req, res) => {
@@ -84,16 +83,21 @@ app.post('/events', (req, res) => {
 });
 
 app.get('/events/manage', (req, res) => {
-    res.render('manage');
+    res.render('manage', {title: "Manage Events"});
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', {title: "Contact Us"});
 });
 
 // const eventsRouter = require('./routes/events');
 // app.use('/events', eventsRouter);
 
 app.use((req, res) => {
-    res.status(404).render('404');
+    res.status(404).render('404', {title: "404"});
+});
+
+const PORT = 4001;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

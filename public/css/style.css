@@ -1,0 +1,659 @@
+:root {
+    /* Traditional Catholic colors with a modern twist */
+    --primary: #1B3C59;      /* Deep navy */
+    --secondary: #B8860B;    /* Dark golden */
+    --accent: #8B0000;       /* Deep red */
+    --light: #e4e4e4;        /* Off-white */
+    --dark: #2C2C2C;         /* Soft black */
+    --gold: #D4AF37;         /* Metallic gold */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary);
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.church-slogan {
+    font-style: italic;
+    color: var(--secondary);
+}
+
+/* Header & Navigation */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.church-logo {
+    width: 50px;
+    height: auto;
+}
+
+.menu-items ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-items a,
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-items a {
+    color: var(--primary);
+    font-weight: 500;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-items a:hover {
+    color: var(--secondary);
+}
+/* 
+.donate-btn {
+    background: var(--accent);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s !important;
+} */
+/* 
+.donate-btn:hover {
+    background: var(--secondary);
+} */
+
+/* Hero Section */
+.hero-section {
+    height: 70vh;
+    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/church-exterior.jpg'); */
+    background-image:  url('cover2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content p {
+    color: #ffffff;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: rgb(231, 231, 231);
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--secondary);
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: var(--light);
+}
+
+.quick-link-item,
+.feedback-form {
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.quick-link-item {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* .quick-link-item:hover {
+    transform: translateY(-5px);
+    transform: rotate(90deg);
+} */
+
+.quick-link-item i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Content Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 4rem 2rem;
+}
+
+.image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('cover.jpg');
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section {
+    h4 { color: var(--gold); margin-bottom: 1.5rem; }
+    ul { list-style: none; }
+    a { color: white; }
+    a:hover { color: var(--gold); }
+}
+
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-block-start: 3rem;
+    padding-block-start: 2rem;
+    border-block-start: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Form Styling */
+.feedback-form {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-items ul {
+        display: none; /* You'll need to implement a mobile menu */
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+}
+
+.hamburger-icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    color: #2C2C2C;
+}
+
+.hamburger-icon span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s;
+    left: 0;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        padding: 80px 2rem 2rem;
+        transform: translateX(-100%);
+        opacity: 1;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+        display: block;
+    }
+
+    .menu-items.active {
+        transform: translateX(0);
+    }
+
+    .menu-items ul {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 2rem;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .mobile-menu-btn.active .hamburger-icon span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .mobile-menu-btn.active .hamburger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active .hamburger-icon span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 40%;
+    }
+}
+
+/* Header Scroll Effect */
+header {
+    transition: transform 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form Success Message */
+.form-success {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Events Page Styles */
+.events-hero {
+    min-height: 40vh;
+    background: url('cover2.jpg') center/cover, linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+    ;
+}
+
+.events-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.events-container a{
+    text-decoration: none;
+}
+
+.event-card {
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 1rem;
+    background: var(--primary);
+    border-radius: 8px;
+    color: white;
+}
+
+.event-date .month {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.event-date .day {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.event-details h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.event-time, .event-location {
+    color: #666;
+    margin: 0.25rem 0;
+}
+
+.event-description {
+    margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .event-date {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Contact Page Styles */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-details {
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Services Page Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-item {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Update the Mobile Menu styles */
+@media (max-width: 768px) {
+    /* Menu Button */
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002;
+    }
+
+    .mobile-menu-btn span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--primary);
+        transition: all 0.3s ease;
+    }
+
+    /* Menu Items */
+    .menu-items {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        z-index: 1001;
+    }
+
+    .menu-items.active {
+        right: 0;
+    }
+
+    .menu-items ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .menu-items a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+        color: var(--primary);
+    }
+
+    /* Hamburger Animation */
+    .mobile-menu-btn.active span:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Hide desktop menu */
+    nav > .menu-items > ul {
+        display: none;
+    }
+}
+
+/* Desktop Menu */
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .menu-items ul {
+        display: flex;
+        gap: 2rem;
+    }
+}
