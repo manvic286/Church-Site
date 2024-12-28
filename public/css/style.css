@@ -687,10 +687,10 @@ header.scrolled {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
-}
-
-main p {
     text-align: center;
     font-size: 1.2rem;
     color: #777;
 }
+/* 
+main .message-body {
+} */
