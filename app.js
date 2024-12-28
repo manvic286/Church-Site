@@ -9,6 +9,11 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+const PORT = 4001;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
 mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -16,11 +21,6 @@ mongoose.connect('mongodb+srv://manuel123:manuel123@cluster0.m5ysuwy.mongodb.net
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('Connection error', err);
-});
-
-const PORT = 4001;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
 });
 
 // Schemas
@@ -91,8 +91,8 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
-const eventsRouter = require('./routes/events');
-app.use('/events', eventsRouter);
+// const eventsRouter = require('./routes/events');
+// app.use('/events', eventsRouter);
 
 app.use((req, res) => {
     res.status(404).render('404');
