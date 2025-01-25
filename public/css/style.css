@@ -429,6 +429,9 @@ header.scrolled {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 1rem;
+    a, a:visited{
+        color: #2C2C2C;
+    }
 }
 
 .events-container a{
@@ -493,6 +496,57 @@ header.scrolled {
         gap: 1rem;
         padding: 0.5rem;
     }
+}
+
+/* add events styles */
+.add-events-container{
+    /* display: block; */
+    display: flex;
+    /* width: 100%; */
+}
+
+.add-events-container form{
+    margin: 0 auto;
+}
+
+.add-events-container input,textarea{
+    width: 400px;
+    padding: 0.5em 0;
+}
+
+textarea {
+    height: 10em;
+}
+
+.img-preview {
+    width: 400px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    object-fit: cover;
+    
+}
+
+/* manage-events button styles */
+.edit-btn, .delete-btn {
+    padding: 0.4em;
+    font-size: 1.2em;
+    border: 1px solid var(--gold);
+    border-radius: 0.65em;
+    background-color: #ffffff;
+    margin: 0 0.2em;
+    :hover{
+        cursor: pointer;
+    }
+}
+
+.add {
+    display: flex;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+p.no-events {
+    text-align: center;
 }
 
 /* Contact Page Styles */

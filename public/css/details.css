@@ -237,10 +237,35 @@ nav {
         display: none;
     }
 }
+
+.events-hero {
+    min-height: 40vh;
+    background: url('/images/cover2.jpg') center/cover, linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+    ;
+}
+
+.hero-content p {
+    color: #ffffff;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: rgb(231, 231, 231);
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
 .event-img {
-    width: 90%;
-    height: 30em;
-    margin: 0 auto
+    width: 50%;
+    height: 25em;
+    margin: 0 auto;
+    border: 1px solid var(--primary);
 }
 
 .event-name h2{
@@ -252,8 +277,8 @@ nav {
 .description {
     margin: 0 auto;
     padding: 1em 0;
-    width: 90%;
-    text-align: center;
+    width: 80%;
+    /* text-align: center; */
     font-size: 1em;
 }
 
@@ -290,4 +315,42 @@ footer {
     margin-block-start: 3rem;
     padding-block-start: 2rem;
     border-block-start: 1px solid rgba(255,255,255,0.1);
+}
+
+/* add events styles */
+main.container{
+    padding: 1em 0;
+    /* display: block; */
+    /* display: flex; */
+    /* width: 100%; */
+}
+
+main.container form{
+    margin: 0 auto;
+    /* padding: 1em 0; */
+}
+
+main.container input,textarea{
+    width: 400px;
+    padding: 0.5em 0;
+}
+
+/* edit events styles */
+.edit-container{
+    /* display: block; */
+    display: flex;
+    /* width: 100%; */
+}
+
+.edit-container form{
+    margin: 0 auto;
+}
+
+.edit-container input, textarea{
+    min-width: 400px;
+    padding: 0.5em 0;
+}
+
+textarea {
+    height: 10em;
 }

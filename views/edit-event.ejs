@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <section class="hero events-hero">
+        <div class="hero-content">
+            <h2>Edit Events</h2>
+            <p>Edit events here</p>
+        </div>
+    </section>
+
+    <main class="edit-container">
+        <form action="/event/<%= event._id %>/edit" method="POST">
+            <label for="eventName">Event name</label><br>
+            <input type="text" name="eventName" id="event-name" value="<%= event.eventName %>" required><br>
+
+            <label for="month">Choose a month:</label><br>
+            <input list="months" id="month" name="month" value="<%= event.month %>" placeholder="Select a month">
+            <datalist id="months">
+                <option value="January">
+                <option value="February">
+                <option value="March">
+                <option value="April">
+                <option value="May">
+                <option value="June">
+                <option value="July">
+                <option value="August">
+                <option value="September">
+                <option value="October">
+                <option value="November">
+                <option value="December">
+            </datalist><br>
+
+            <label for="day">Day</label><br>
+            <input type="number" name="day" id="day" value="<%= event.day %>" required><br>
+
+            <label for="time">Time</label><br>
+            <input type="time" name="time" id="time" value="<%= event.time %>" required><br>
+
+            <label for="description">Description</label><br>
+            <textarea name="description" id="description" required><%= event.description %></textarea><br>
+
+            <label for="image">Choose Image: </label><br>
+            <input type="file" name="image" id="imageInput" accept="image/*">
+            <img id="imagePreview" src="" alt="">
+            <br><br>
+            
+            <button type="submit">Update Event</button>
+        </form>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

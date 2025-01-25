@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav-admin.ejs') %>
+    <section class="hero events-hero">
+        <div class="hero-content">
+            <h2>Add Events</h2>
+            <p>Create your events here</p>
+        </div>
+    </section><br><br>
+
+    <main class="add-events-container">
+        <!-- <h2>Manage Events</h2> -->
+
+        <form action="/events" method="POST">
+            <label for="eventName">Event name</label><br>
+            <input type="text" name="eventName" id="event-name" required><br>
+
+            <label for="month">Choose a month:</label><br>
+            <input list="months" id="month" name="month" placeholder="Select a month">
+            <datalist id="months">
+                <option value="January">
+                <option value="February">
+                <option value="March">
+                <option value="April">
+                <option value="May">
+                <option value="June">
+                <option value="July">
+                <option value="August">
+                <option value="September">
+                <option value="October">
+                <option value="November">
+                <option value="December">
+            </datalist><br>
+
+            <label for="day">Event day</label><br>
+            <input type="number" name="day" id="event-day" min="1" max="31" required><br>
+
+            <label for="time">Time</label><br>
+            <input type="time" name="time" id="event-time" required><br>
+
+            <label for="description">Event description</label><br>
+            <textarea name="description" id="event-description" required></textarea><br>
+
+            <label for="image">Choose Image: </label><br>
+            <input type="file" name="image" id="imageInput" accept="image/*"><br>
+            <img class="img-preview" id="imagePreview" src="" alt="">
+            <br><br>
+
+            <button>Submit</button>
+        </form>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
