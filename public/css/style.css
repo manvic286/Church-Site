@@ -520,10 +520,10 @@ textarea {
 
 .img-preview {
     width: 400px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
     border: 1px solid black;
     object-fit: cover;
-    
+    border-radius: 0.5em;
 }
 
 /* manage-events button styles */
