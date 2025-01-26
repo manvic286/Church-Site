@@ -240,6 +240,11 @@ nav {
     .event-img {
     width: 95%;
     }
+
+    .edit-container input,.edit-container textarea{
+    width: 90%;
+    padding: 0.5em 0;
+    }
 }
 
 .events-hero {
