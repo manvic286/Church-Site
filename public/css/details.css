@@ -239,9 +239,6 @@ nav {
 
     .event-img {
     width: 90%;
-    aspect-ratio: 16/9;
-    margin: 0 auto;
-    border: 1px solid var(--primary);
     }
 }
 
@@ -272,6 +269,13 @@ nav {
     text-align: center;
     /* font-size: 2em; */
     margin: 1em 0;
+}
+
+.event-img {
+    width: 50%;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    border: 1px solid var(--primary);
 }
 
 .description {
