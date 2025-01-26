@@ -497,7 +497,7 @@ header.scrolled {
         padding: 0.5rem;
     }
 
-    .add-events-container input, .add-events-container textarea{
+    .add-events-container input, textarea{
     width: 90%;
     padding: 0.5em 0;
     }
