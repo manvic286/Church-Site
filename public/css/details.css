@@ -159,7 +159,7 @@ nav {
 }
 
 /* Update the Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     /* Menu Button */
     .mobile-menu-btn {
         display: flex;
@@ -238,7 +238,7 @@ nav {
     }
 
     .event-img {
-    width: 95%;
+    width: 90%;
     }
 
     .edit-container input,.edit-container textarea{
