@@ -501,6 +501,10 @@ header.scrolled {
     width: 90%;
     padding: 0.5em 0;
     }
+
+    .img-preview {
+    width: 90%;
+    } 
 }
 
 /* add events styles */
