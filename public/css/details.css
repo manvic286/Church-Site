@@ -338,7 +338,7 @@ footer {
 }
 
 .edit-container input,.edit-container textarea{
-    min-width: 400px;
+    width: 400px;
     padding: 0.5em 0;
 }
 
