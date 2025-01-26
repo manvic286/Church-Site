@@ -278,7 +278,7 @@ nav {
 
 .event-img {
     width: 60%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     margin: 0 auto;
     border: 1px solid var(--primary);
 }
@@ -338,7 +338,7 @@ footer {
 }
 
 .edit-container input,.edit-container textarea{
-    width: 400px;
+    width: 300px;
     padding: 0.5em 0;
 }
 
