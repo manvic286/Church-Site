@@ -317,24 +317,6 @@ footer {
     border-block-start: 1px solid rgba(255,255,255,0.1);
 }
 
-/* add events styles */
-main.container{
-    padding: 1em 0;
-    /* display: block; */
-    /* display: flex; */
-    /* width: 100%; */
-}
-
-main.container form{
-    margin: 0 auto;
-    /* padding: 1em 0; */
-}
-
-main.container input,textarea{
-    width: 400px;
-    padding: 0.5em 0;
-}
-
 /* edit events styles */
 .edit-container{
     /* display: block; */
